@@ -1,0 +1,8 @@
+print("hello World!")
+print("Hello World\nWelcome to my test runs\nin python")
+print("Hello" + "World!")
+print("Hello" + " " + "World!")
+name = input("What is your name ?")
+greeting = print("Hello" + " " + name)
+age = input("What is your age" + " " + name + "?")
+greeting = print("Hello" + " " + name + " " + age + " " + "Nice to meet you !")
