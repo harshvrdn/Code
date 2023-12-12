@@ -10,3 +10,5 @@ formula = print("BMI is calculated using the formula - Weight/Height^2")
 
 BMI = W/(H_inM ** 2)
 print(BMI)
+
+print("Thanks for checking in ;)")
