@@ -1,5 +1,7 @@
 # Simple Tips Calculator
 
+print("Welcome to the Tips calculator")
+
 # Asking user for the total bill and storing the value as an integer.
 Bill_total = input("What is the total bill acquired ?\n")
 Bill = int(Bill_total)
