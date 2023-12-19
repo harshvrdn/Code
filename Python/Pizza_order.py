@@ -15,14 +15,14 @@ if size == "S":
     if extra_peproni == "Y":
         price += 30
         print(f"The updated price for you Pizza is {price} Rupees\n")
-        extra_cheese = input("Would you like to have extra cheese on your Pizza: Y or N\n")
-        if extra_cheese == "Y":
-            price += 20
-            print(f"The updated price for your Pizza is {price} Rupees\n")
-        else:
-            print(f"The updated price for your Pizza is {price} Rupees\n")
     else:
         print(f"The price for your Pizza is {price} Rupees\n")
+    extra_cheese = input("Would you like to have extra cheese on your Pizza: Y or N\n")
+    if extra_cheese == "Y":
+            price += 20
+            print(f"The updated price for your Pizza is {price} Rupees\n")
+    else:
+            print(f"The updated price for your Pizza is {price} Rupees\n")
 elif size == "M":
      price = 150
      print(f"The price for your Pizza is {price} Rupees\n")
@@ -30,14 +30,14 @@ elif size == "M":
      if extra_peproni == "Y":
          price += 30
          print(f"The updated price for your pizza is {price} Rupees\n")
-         extra_cheese = input("Would you like to have extra cheese on your pizza: Y or N\n")
-         if extra_cheese == "Y":
-             price += 20
-             print(f"The updated price for your pizza is {price} Rupees\n")
-         else:
-             print(f"The updated price for your pizza is {price} Rupees\n")
      else:
          print(f"The updated price for your pizza is {price} Rupees\n")
+     extra_cheese = input("Would you like to have extra cheese on your pizza: Y or N\n")
+     if extra_cheese == "Y":
+             price += 20
+             print(f"The updated price for your pizza is {price} Rupees\n")
+     else:
+             print(f"The updated price for your pizza is {price} Rupees\n")    
 elif size == "L":
      price = 300
      print(f"The updated price for your pizza is {price} Rupees\n")
@@ -45,14 +45,14 @@ elif size == "L":
      if extra_peproni == "Y":
          price += 30
          print(f"The updated price for your pizza is {price} Rupees\n")
-         extra_cheese = input("Would you like to have some extra cheese: Y or N\n")
-         if extra_cheese == "Y":
-             price += 20
-             print(f"The updated price for your pizza is {price} Rupees\n")
-         else:
-             print(f"The updated price for your pizza is {price} Rupees\n")
      else:
          print(f"The updated price for your pizza is {price} Rupees\n")
+     extra_cheese = input("Would you like to have some extra cheese: Y or N\n")
+     if extra_cheese == "Y":
+             price += 20
+             print(f"The updated price for your pizza is {price} Rupees\n")
+     else:
+             print(f"The updated price for your pizza is {price} Rupees\n")
 else:
     print("Sorry! Please enter a valid response\n")
 
