@@ -8,12 +8,6 @@ print("Hello and Welcome to this choice based game that I made in python\n"
 # Asking for the player's name
 Player = input("Please enter your name:")
 
-# Randomizing the games final output
-game_output1 = "Game won"
-game_output2 = "Game lost"
-
-game_outputrand = [game_output1, game_output2]
-
 choice1 = input('You are at a crossroad. Where do you wanna go? Type "Left" or "Right"\n')
 if choice1 == "Left":
     choice2 = input("You come across a lake in the middle of an ocean. What do you want ot do now? You can either swim to there or wait for the boat. Type 'Swim' or 'Wait'\n")
