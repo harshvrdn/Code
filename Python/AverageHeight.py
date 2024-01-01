@@ -2,7 +2,7 @@
 
 print("Hello and Welcome to this program !\n")
 
-student_height = input("Please enter the heights separated by commas:\n")
+student_height = input("Please enter the heights:\n")
 student_height = student_height.split()
 
 for n in range(0, len(student_height)):
