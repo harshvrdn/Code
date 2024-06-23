@@ -1,0 +1,13 @@
+prefix=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda
+exec_prefix=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda
+libdir=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda/lib
+sharedlibdir=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda/lib
+includedir=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

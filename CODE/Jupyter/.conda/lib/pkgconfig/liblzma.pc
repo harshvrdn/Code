@@ -1,0 +1,20 @@
+#
+# Author: Lasse Collin
+#
+# This file has been put into the public domain.
+# You can do whatever you want with this file.
+#
+
+prefix=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda
+exec_prefix=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda
+libdir=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda/lib
+includedir=/home/harshvrdhn/Documents/Code/CODE/Jupyter/.conda/include
+
+Name: liblzma
+Description: General purpose data compression library
+URL: https://xz.tukaani.org/xz-utils/
+Version: 5.4.6
+Cflags: -I${includedir}
+Cflags.private: -DLZMA_API_STATIC
+Libs: -L${libdir} -llzma
+Libs.private: -pthread -lpthread
