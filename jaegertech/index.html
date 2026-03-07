@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JaegerTech | Pan Pacific Defense Corps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <svg class="logo-hex" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 1L39 12V34L20 45L1 34V12L20 1Z" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M20 8L33 15.5V30.5L20 38L7 30.5V15.5L20 8Z" fill="currentColor" opacity="0.15"/>
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Orbitron" font-size="10" font-weight="700" fill="currentColor">JT</text>
+      </svg>
+      <span class="logo-text">JAEGER<span class="logo-accent">TECH</span></span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#jaegers" class="nav-link">Jaegers</a></li>
+      <li><a href="#timeline" class="nav-link">Timeline</a></li>
+      <li><a href="#personnel" class="nav-link">Personnel</a></li>
+      <li><a href="#ppdc" class="nav-link">PPDC</a></li>
+    </ul>
+
+    <div class="nav-threat">
+      <span class="threat-dot"></span>
+      <span class="threat-text">THREAT LEVEL: <strong>CATEGORY IV</strong></span>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid-lines"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-line"></span>
+        PAN PACIFIC DEFENSE CORPS — CLASSIFIED DATABASE
+        <span class="badge-line"></span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-jaeger" data-text="JAEGER">JAEGER</span>
+        <span class="title-tech" data-text="TECH">TECH</span>
+      </h1>
+
+      <p class="hero-tagline">CANCEL THE APOCALYPSE</p>
+
+      <p class="hero-desc">
+        The definitive intelligence archive of Jaeger combat systems, pilot records, and
+        tactical data from humanity's war against the Kaiju.
+      </p>
+
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num" data-target="76">0</span>
+          <span class="stat-label">Jaegers Built</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="83">0</span>
+          <span class="stat-label">Kaiju Defeated</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="12">0</span>
+          <span class="stat-label">Years of War</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" data-target="7">0</span>
+          <span class="stat-suffix">B+</span>
+          <span class="stat-label">Lives Protected</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#jaegers" class="btn btn-primary">
+          <span>VIEW JAEGER DATABASE</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#timeline" class="btn btn-ghost">MISSION TIMELINE</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ══ JAEGERS ═════════════════════════════════════════════════════ -->
+  <section class="section jaegers-section" id="jaegers">
+    <div class="section-header">
+      <div class="section-eyebrow">COMBAT SYSTEMS DATABASE</div>
+      <h2 class="section-title">KNOWN JAEGERS</h2>
+      <p class="section-desc">
+        Combat-ready Jaeger units deployed across all theatres of Pacific Rim operations.
+        Hover to access full technical readout.
+      </p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">ALL UNITS</button>
+      <button class="filter-btn" data-filter="active">ACTIVE</button>
+      <button class="filter-btn" data-filter="kia">KIA</button>
+      <button class="filter-btn" data-filter="retired">RETIRED</button>
+    </div>
+
+    <div class="jaeger-grid" id="jaeger-grid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- ══ TIMELINE ════════════════════════════════════════════════════ -->
+  <section class="section timeline-section" id="timeline">
+    <div class="section-header">
+      <div class="section-eyebrow">HISTORICAL RECORD</div>
+      <h2 class="section-title">THE KAIJU WAR</h2>
+      <p class="section-desc">
+        A chronicle of key events in the decade-long conflict between humanity and
+        the Kaiju threat from the Breach.
+      </p>
+    </div>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-spine"></div>
+      <div class="timeline-container" id="timeline-container">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PERSONNEL ═══════════════════════════════════════════════════ -->
+  <section class="section personnel-section" id="personnel">
+    <div class="section-header">
+      <div class="section-eyebrow">HALL OF HEROES</div>
+      <h2 class="section-title">KEY PERSONNEL</h2>
+      <p class="section-desc">
+        Honoring the pilots, engineers, scientists, and commanders who gave everything
+        to protect humanity from extinction.
+      </p>
+    </div>
+
+    <div class="personnel-filter">
+      <button class="filter-btn active" data-pfilter="all">ALL</button>
+      <button class="filter-btn" data-pfilter="command">COMMAND</button>
+      <button class="filter-btn" data-pfilter="pilot">PILOTS</button>
+      <button class="filter-btn" data-pfilter="science">SCIENCE</button>
+      <button class="filter-btn" data-pfilter="support">SUPPORT</button>
+    </div>
+
+    <div class="personnel-grid" id="personnel-grid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- ══ PPDC ═════════════════════════════════════════════════════════ -->
+  <section class="section ppdc-section" id="ppdc">
+    <div class="ppdc-inner">
+      <div class="ppdc-text">
+        <div class="section-eyebrow">PAN PACIFIC DEFENSE CORPS</div>
+        <h2 class="section-title">UNITED IN THE DRIFT</h2>
+        <p>
+          Founded in the wake of the first Kaiju attack in 2013, the Pan Pacific Defense Corps
+          unified 35 nations under one mission: build mechanical giants capable of matching
+          a Kaiju blow for blow. The answer was the Jaeger — a 2,000-ton weapon of war
+          controlled by two pilots fused in a shared neural link called the Drift.
+        </p>
+        <p>
+          Through the Drift, two minds become one — sharing memories, instincts, and reflexes
+          at the speed of thought. The neural load is too great for one person alone. Together,
+          humanity found a way to fight back.
+        </p>
+
+        <div class="ppdc-pillars">
+          <div class="pillar">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h4>The Drift</h4>
+            <p>Neural co-piloting technology fusing two minds into a single combat consciousness</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28">
+                <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <h4>Kaiju Science</h4>
+            <p>R&amp;D division dedicated to understanding and countering the alien Kaiju biology</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h4>Shatterdome Network</h4>
+            <p>Global coastal defense fortresses housing Jaeger combat units and crews</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28">
+                <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              </svg>
+            </div>
+            <h4>The Breach</h4>
+            <p>An interdimensional portal at the Pacific floor — origin point of the Kaiju invasion</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ppdc-visual">
+        <div class="globe-container">
+          <div class="globe-sphere">
+            <div class="globe-ring globe-ring-1"></div>
+            <div class="globe-ring globe-ring-2"></div>
+            <div class="globe-ring globe-ring-3"></div>
+            <div class="globe-core"></div>
+          </div>
+          <div class="shatterdome-nodes">
+            <div class="sd-node" style="top:32%;left:18%" data-name="Anchorage"></div>
+            <div class="sd-node" style="top:56%;left:24%" data-name="Lima"></div>
+            <div class="sd-node" style="top:46%;left:54%" data-name="Hong Kong"></div>
+            <div class="sd-node" style="top:38%;left:62%" data-name="Tokyo"></div>
+            <div class="sd-node" style="top:63%;left:73%" data-name="Sydney"></div>
+            <div class="sd-node" style="top:30%;left:48%" data-name="Moscow"></div>
+          </div>
+        </div>
+        <div class="globe-caption">SHATTERDOME NETWORK — GLOBAL DEPLOYMENT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg class="logo-hex" viewBox="0 0 40 46" fill="none">
+            <path d="M20 1L39 12V34L20 45L1 34V12L20 1Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M20 8L33 15.5V30.5L20 38L7 30.5V15.5L20 8Z" fill="currentColor" opacity="0.15"/>
+            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Orbitron" font-size="10" font-weight="700" fill="currentColor">JT</text>
+          </svg>
+          <span class="logo-text">JAEGER<span class="logo-accent">TECH</span></span>
+        </div>
+        <blockquote class="footer-quote">
+          "Today we are cancelling the apocalypse."
+          <cite>— Marshal Stacker Pentecost</cite>
+        </blockquote>
+      </div>
+
+      <div class="footer-nav">
+        <h5>Navigate</h5>
+        <a href="#jaegers">Jaeger Database</a>
+        <a href="#timeline">War Timeline</a>
+        <a href="#personnel">Hall of Heroes</a>
+        <a href="#ppdc">About PPDC</a>
+      </div>
+
+      <div class="footer-info">
+        <h5>Classification</h5>
+        <p>All data herein is the property of the Pan Pacific Defense Corps. Unauthorized access is a violation of PPDC Directive 7-Alpha.</p>
+        <div class="footer-tags">
+          <span class="tag">PPDC CLASSIFIED</span>
+          <span class="tag">DRIFT SECURE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Pan Pacific Defense Corps — Jaeger Technical Database</span>
+      <span>ALL DATA CLASSIFIED · BREACH STATUS: <strong class="breach-closed">CLOSED</strong></span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
